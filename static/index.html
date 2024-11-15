@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Style Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Thumbnail Style Controller</h2>
+                <p class="subtitle">Customize your thumbnail's exaggeration levels</p>
+            </div>
+
+            <div class="card-content">
+                <!-- Reference Input -->
+                <div class="input-group">
+                    <label>Reference Thumbnail URL</label>
+                    <input type="text" id="referenceUrl" placeholder="Paste YouTube thumbnail URL...">
+                </div>
+
+                <!-- Prompt Input -->
+                <div class="input-group">
+                    <label>Your Prompt</label>
+                    <input type="text" id="userPrompt" placeholder="Describe your thumbnail...">
+                </div>
+
+                <!-- Quick Style Presets -->
+                <div class="preset-section">
+                    <label>Quick Style Presets</label>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="subtle">Subtle</button>
+                        <button class="preset-btn active" data-preset="balanced">Balanced</button>
+                        <button class="preset-btn" data-preset="extreme">Extreme</button>
+                    </div>
+                </div>
+
+                <!-- Sliders Section -->
+                <div class="sliders-section">
+                    <div class="slider-group">
+                        <label>Overall Exaggeration</label>
+                        <input type="range" id="exaggeration" min="0" max="100" value="50">
+                        <div class="slider-labels">
+                            <span>Subtle</span>
+                            <span>Extreme</span>
+                        </div>
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Color Intensity</label>
+                        <input type="range" id="colorIntensity" min="0" max="100" value="50">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Face Emphasis</label>
+                        <input type="range" id="faceEmphasis" min="0" max="100" value="50">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Object Scaling</label>
+                        <input type="range" id="objectScaling" min="0" max="100" value="50">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Text Size</label>
+                        <input type="range" id="textSize" min="0" max="100" value="50">
+                    </div>
+                </div>
+
+                <!-- Generate Section -->
+                <div class="generate-section">
+                    <button id="generateBtn" class="generate-btn">Generate Thumbnail</button>
+                    <div class="preview-area">
+                        <span>Preview Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
